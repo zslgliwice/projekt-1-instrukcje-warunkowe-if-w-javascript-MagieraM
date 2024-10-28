@@ -12,7 +12,7 @@
 <body>
 
 	<label>
-		Podaj numer dnia tygodnia: <input type="number">
+		Podaj numer dnia tygodnia: <input type="number" id="numerDnia">
 	</label>
 	
 	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
@@ -23,7 +23,16 @@
 	
 		function getDayName()
 		{
-					
+			var numerDnia = document.getElementById("numerDnia").value;
+			var dni = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
+			var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+			var liczba = ["Pierwszy", "Drugi", "Trzeci", "Czwarty", "Piąty", "Szósty", "Siódmy"];
+
+			if(numerDnia >= 1 && numerDnia <= 7){
+				document.getElementById("wynik").textContent = liczba[numerDnia - 1]+" dzień tygodnia to: "+ days[numerDnia - 1] +" czyli "+ dni[numerDnia - 1];
+			} else{
+				document.getElementById("wynik").textContent = "Podaj numer dnia od 1 do 7!!!";
+			}
 			
 		}
 

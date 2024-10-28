@@ -19,11 +19,16 @@
 	
 	<script>
 	
-		function teleturniej()
-		{
-			var lucky = Math.floor(Math.random() * 3) + 1;
-			
-		}
+	function teleturniej()
+	{
+            var lucky = Math.floor(Math.random() * 3) + 1;
+            var wyborGracza = document.getElementById("bramka").value;
+
+            document.getElementById("wynik").innerText = 
+                (wyborGracza === lucky) 
+                ? `Hurra! W bramce nr ${lucky} jest samochód!` 
+                : `Niestety! Samochód znajdował się w bramce nr ${lucky}...`;
+        }
 
 	</script>
 

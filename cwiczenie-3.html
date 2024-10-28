@@ -19,11 +19,32 @@
 	
 	<script>
 	
-		function ktora_cwiartka()
-		{
-			
-			
-		}
+	function ktora_cwiartka() 
+	{
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let wynik = document.getElementById("wynik");
+
+            if(x === 0 && y === 0){
+                wynik.innerHTML = "Punkt P=(0,0) jest początkiem układu współrzędnych";
+            } else if(x === 0 || y === 0){
+                wynik.innerHTML = "Punkt leży pomiędzy dwiema ćwiartkami";
+            } else if(x > 0 && y > 0){
+				wynik.innerHTML = "Punkt znajduje się w I ćwiartce.";
+            } else if(x < 0 && y > 0){
+				wynik.innerHTML = "Punkt znajduje się w II ćwiartce.";
+            } else if(x < 0 && y < 0){
+				wynik.innerHTML = "Punkt znajduje się w III ćwiartce.";
+            } else if(x > 0 && y < 0){
+				wynik.innerHTML = "Punkt znajduje się w IV ćwiartce.";
+            } else{
+				wynik.innerHTML = "Podaj prawidłowe wartości!"
+			}
+
+			if(x === 15 && y === 96){
+				wynik.innerHTML = "(I ćwiartka)<br><b><h1>Kartezjusz:</b></h1> AKA Playboi Carti: amerykański raper i wokalista znany ze swojego unikalnego stylu muzycznego, łączącego minimalistyczne, eksperymentalne bity z charakterystycznym, melodyjnym flow i głosem.";
+			}
+        }
 
 	</script>
 
